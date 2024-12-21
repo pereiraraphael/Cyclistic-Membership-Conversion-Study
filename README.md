@@ -29,14 +29,13 @@ Although this project could be carried using different tools that would fill the
 
 ### Useful information
 <hr>
-(I NEED TO REFINE THIS SECTION BEFORE FINISHING DOCUMENT)
 
 In order to check my entire code in R studio, you can access  objects: **(IMPLEMENT ON GITHUB)**
 
-* **data_setup.R**
-* **data_exploration.R**
-* **data_cleaning.R**
-* **data_analysis.R**
+* [**data_setup.R**](data_setup_and_combining.R)
+* [**data_exploration.R**](data_exploration.R)
+* [**data_cleaning.R**](data_cleaning.R)
+* [**data_analysis.R**](data_analysis.R)
 
 ## Study case and company background
 
@@ -75,8 +74,6 @@ The company aims to maximize the number of annual memberships to increase profit
 ## 2. Prepare
 <hr>
 
-Prepare scripts can be found here: (IMPLEMENT ON GIT HUB)
-
 Data location: [divvy-data](https://divvy-tripdata.s3.amazonaws.com/index.html)<br>
 License: [here](https://divvybikes.com/data-license-agreement)
  
@@ -96,7 +93,7 @@ The raw data is not complete, although every ride has been registered in the per
 ## 3. Process
 <hr>
 
-Process scripts can be found here: (IMPLEMENT ON GIT HUB)
+ 
 
 To work with Cyclistic's data, I had to apply previous knowledge I acquired during the Google Data Analytics Professional Certificate. Excel and RStudio.
 
@@ -118,10 +115,13 @@ To clean the data mentioned, I will follow the next steps in order to make my da
 
 ### 3.1 Data manipulation - Uploading and merging data
 
-  *All the codes for this step can be found [here](________________________________)*
+Scripts [here](data_setup_and_combining.R)(data_setup_and_combining.R)
+
 The first step with my data set was to upload and combine the 12 tables provided into one readable file called bike_rides_112023_102024_df, portraying the subject(Bike rides), the period studied(11/2023 to 10/2024). Note: **df** stands for **data frame** and will be user constantly throughout my code. This step generated a data frame with 5,933,712 rows with individual rides each. 
   
 ### 3.2 Sampling data
+
+Scripts [here](data_setup_and_combining.R)(data_setup_and_combining.R)
 
 To make working with this data faster, due to hardware limitations, all the calculations from this point and beyond were done using **statistical inference.** For those who are not familiarized with this term, this is how the  [Meriam-Webster](https://www.merriam-webster.com/dictionary/statistical%20inference) Dictionary describes statistical inference:
   
@@ -130,6 +130,8 @@ To make working with this data faster, due to hardware limitations, all the calc
 Starting with the sample size, I used the sample calculator from [Qualtrics](https://www.qualtrics.com/blog/calculating-sample-size/) to determine what would be considered a safe sample size. Base on this calculator's metric, to achieve a confidence level above 99% in a population of 5933712 with less than 1% margin of error, we could work with any sample larger than 16,531. To be in a comfortable zone, I chose to use a sample size of  593,371, representing 10% of our total population.
   
 ### 3.3 Data exploration
+
+Scripts [here](data_exploration.R)(data_exploration.R)
 
 All the results for calculations on this section will be done by adjusting it by the population size, which is 10 times larger that our sample.
 
@@ -143,7 +145,7 @@ Before working with the data to draw conclusions, it is important to make sure t
 
 Now that we know our data is reliable, original, current and cited, let's explore the data.
   
-### 3.3.1 Checking data types
+#### 3.3.1 Checking data types
   
 The data used for this study was organized in 13 columns. The two following images are part of the same table, and will show us the name, data type and some rows for each column.
   
@@ -159,7 +161,7 @@ The columns ride_id, rideable_type, started_at, ended_at, start_station_name, en
   
   The columns start_lat, start_lng, end_lat, end_lng have a ***dbl*** type, used to describe integer numbers.
 
-### 3.3.2 Checking data for null values
+#### 3.3.2 Checking data for null values
 <br>
 
 To make sure the data is complete, we used the function head to look for the presence of null values in any of our columns. The table bellow indicates that we have 748 null rows in our sample for the columns end_lat and end_lng.
@@ -168,19 +170,19 @@ To make sure the data is complete, we used the function head to look for the pre
  
 When we adjust this data to the population size, the columns **end_lat** and **end_lng** had 7480 rows with null values each, totaling 14960 nulls spotted. One of the things I realized is that many stations have multiple different coordinates, and a theory I will test is that some of the rows with null latitudes and longitudes, probable have other rows with the same station name and with the right coordinates. 
 
-### 3.3.3 Checking data for duplicates
+#### 3.3.3 Checking data for duplicates
 
 Throughout the data, I also noticed we have some duplicated rows, they will be eliminated in the future to make the data more precise.
 
 There is a total of 5 duplicates for the sample studied or 50 duplicates in the entire population of users.
   
-### 3.3.4 Checking for blank values
+#### 3.3.4 Checking for blank values
   
 ![count_blank](https://github.com/user-attachments/assets/a0c7e7a0-31cf-4017-a1ac-ae2cd9c2f085)
 
 All these columns above had_id had more than 100,000 rolls with blank values each. many rows could have multiple columns with blank spaces.
   
-### 3.3.5 Checking for distinct rideable_type
+#### 3.3.5 Checking for distinct rideable_type
 
 The data returned 3 types of vehicles that Cyclistic's clients can use. 
   
@@ -188,9 +190,11 @@ The data returned 3 types of vehicles that Cyclistic's clients can use.
 
 After inspecting and exploring the data, I noticed that **748 rows** with null coordinates need to be fixed, 5 duplicates need to be deleted as well and more than 400,000 cells has blank spaces that will be corrected.
   
-## 3.4 Data cleaning
+### 3.4 Data cleaning
+
+Scripts [here](data_cleaning.R)(data_cleaning.R)
   
-### 3.4.1 Null values and blank values
+#### 3.4.1 Null values and blank values
 
   As mentioned before, many stations names in the data frame had very close coordinates. To make sure we have a standard data regarding each station name location, I dropped all the stations with null values.
   
@@ -198,14 +202,14 @@ This fixed 748 end_lng and 748 end_lat the null values in the sample.
 
 All the columns with blank values were also removed. After this step,Our data  had 427,250 rows left and 166,008 rows eliminated.
   
-### 3.4.2 duplicates
+#### 3.4.2 duplicates
 
 All the five duplicated rows were dropped from the data set, so they don't interfere in out analysis.
   
 ## 4. Analyze and Share
 <hr>
 
-Analyze scripts can be found here: (IMPLEMENT ON GIT HUB)
+Scripts [here](data_analysis.R)()
 
 With the data cleaned and ready to be analyzed, I used R studios to test different hypothesis and draw conclusions about it.
 
@@ -288,7 +292,7 @@ Other several stations with high usage are located inside and around the Chicago
 ![Rplot - Members](https://github.com/user-attachments/assets/4948c9c6-11fe-4bf3-a495-02c58fecd123)
 
 
-### 4.4  -  When is the client using the bike service?
+### 4.5  -  When is the client using the bike service?
 
 This section will be split into 3 parts:
 
@@ -298,7 +302,7 @@ This section will be split into 3 parts:
  
 Biking habits can be influenced by a hand full of reasons like leisure, commuting, studying, working, changing health habits, among others. I separated a few more graphs that could help us understanding what influences how out users bike. The hours where this service is used the most could help us understanding more about our user and identifying possible habits that could influence on peak hours.
 
-### 4.4.1 Peak hours for casual users and members
+### 4.5.1 Peak hours for casual users and members
 
 The first graph depicts peak hours for casual users. It show us very few activity on the late night hours, as well as low usage during peak hours between 7a.m. and 8a.m. Casual users tend to use more the bike service by the afternoon, after lunch time. This could be due to a mix of tourists and residents using the bikes for leisure.
 
@@ -308,7 +312,7 @@ Now notice that when we are doing the same analysis focused on members, the peak
 
 ![peak_hour_2-1](https://github.com/user-attachments/assets/897ea2c8-21f7-4733-8c37-cbfd3259cad2)
 
-### 4.4.2 On which days of the week we see more activity for the users?
+### 4.5.2 On which days of the week we see more activity for the users?
 
 Considering the average week, the graph shows that the casual users have a very diluted usage of the bikes service on the week days, with a noticeable increase on weekend. This could be indicative of weekend travelers or city residents that don't use the bike service for commuting, but use it for leisure on their days off.
 
@@ -316,7 +320,7 @@ At the same time, members have a heavy usage on the week-days, but that decrease
  
 ![peak_dak_of_week 1-1](https://github.com/user-attachments/assets/ea6b16c9-5dce-4ae7-98e2-5413676cc9cb)
 
-### 4.4.3 Annual seasonality on bike usage
+### 4.5.3 Annual seasonality on bike usage
 
 I also extracted from the database the annual seasonality for the bike services. This can help us understanding if factors like weather has a role on the number of rides. In order to do that, I will group the data of the last 12 months and inform the frequency of use per month.
 
@@ -326,7 +330,7 @@ The graph indicates a higher number of rides between May and October, and low us
 
 Information about the temperature for the region of Chicago can be found on the National Weather Service website, with data collected by the National Oceanic and Atmospheric Administration [here](https://www.weather.gov/lot/ord_rfd_monthly_yearly_normals). This data show us a similar trend where the warmest months would align with the months with more bike rides.
 
-### 4.4.4 Analysis Summary
+### 4.5.4 Analysis Summary
 
 #### User base overview
 * Cyclistic's user base consists of 2,740,060 members(65%) and 1,532,440 casual users(35%), this numbers shows us a significant opportunity to convert casual users into members.
