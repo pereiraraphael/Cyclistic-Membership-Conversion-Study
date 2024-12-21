@@ -272,6 +272,8 @@ Among Cyclistic users, there is a predominance of members(64%), but more than a 
   
 This data was processed to validate my hypothesis that members would be more inclined to pick electric scooters. The data on the graph above did not support this hypothesis. It shows that 1,68% of the casual members use electric scooters to move around the town. We can also notice that 0,78% of the members use this same service. This tells me that casual users are more inclined to use electric scooters.
 
+
+
 ```{R user_base_per_rideable_df, echo=FALSE}
     # Table - Count of rides and percentage per rideable_type
       count_of_percentage_per_rideable_df <- bike_rides_main_df %>% 
@@ -309,6 +311,18 @@ This data was processed to validate my hypothesis that members would be more inc
     # Table - Count of rides and percentage per rideable_type
       head(count_of_percentage_per_rideable_df)
 ```
+
+Summary of users:
+
+* Casual users
+  * Classic bike - 64%
+  * Electric bike - 34.4%
+  * Electric Scooter - 1,69%
+  
+* Members
+  * Classic bike - 65,9%
+  * Electric bike - 33,3%
+  * Electric Scooter - 0,78%
 
 ### 4.3  - What is the average usage time of these vehicles?
  
@@ -353,7 +367,7 @@ The heat map bellow will give us a general perspective of the most used stations
 
 Larger circles indicate more activity per station. 
 
-If you're using a web browser to open this file in html format, this is an interactive map, you can rover your pointer over the circles to see how many rides started on that station. In addition to that, you can zoom in and zoom out the map to better investigate the data.
+If you're using a web browser to open the original file in html format, this is an interactive map, you can rover your pointer over the circles to see how many rides started on that station. In addition to that, you can zoom in and zoom out the map to better investigate the data.
 
 
 ```{R Heatmap_1, echo=FALSE}
@@ -448,10 +462,12 @@ Next, we can see the activity map for members, with a high concentration of ride
 Two other location where the rides were very concentrated were near the University of Chicago area, inside the campus, near museums and parks and then near the University of Illinois, one of the largest universities in the state of Illinois. 
 
 The University of Chicago had two stations with high usage:
+
 * University Ave & 57th st with 17200 rides starting there
 * Ellis Ave & 55th st with 13700 rides starting there
 
 The university of Illinois had one station with high usage:
+
 * State St & 33rd St with 13740 rides starting there
 
 Other several stations with high usage are located inside and around the Chicago Loop area, a central business district home of large companies like United Airlines, Exelon, CNA Financial, Hyatt and Boeing. This area is also surrounded by an elevated train system, giving the "Loop" name to the area.
@@ -635,5 +651,6 @@ Although the company already leads the bike-share business in that city, the exi
 We prepared a series of actions our company and marketing team could take in order to reach a large base of users and increase conversion rates from casual users to members. Please check the table below for a detailed version of these suggestions.
 
 ![4W1H](C:/Users/Raphael Pereira/Documents/R projects/R cyclistic project capstone/Main/picture_files/4W1H capstone.png)
+
 
 The analysis revealed clear distinctions between casual riders and members. Casual riders primarily use bikes for leisure during weekends and afternoons, while members use bikes for commuting during weekdays. These insights highlight the need for targeted marketing strategies that appeal to casual riders' motivations and usage patterns
