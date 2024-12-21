@@ -262,7 +262,7 @@ The heat map bellow will give us a general perspective of the most used stations
 
 Larger circles indicate more activity per station. 
 
-If you're using a web browser to open the original file in html format, this is an interactive map, you can rover your pointer over the circles to see how many rides started on that station. In addition to that, you can zoom in and zoom out the map to better investigate the data.
+If you're using a web browser to open the [original file in html](cyclistic_capstone_markdown.html) format, this is also an interactive map, you can rover your pointer over the circles to see how many rides started on that station. In addition to that, you can zoom in and zoom out the map to better investigate the data.
 
 
 ![Rplot - Both user types](https://github.com/user-attachments/assets/b1e15e1f-4b70-4666-93ca-32fad8aafac4)
