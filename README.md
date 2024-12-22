@@ -30,7 +30,7 @@ Although this project could be carried using different tools that would fill the
 ### Useful information
 <hr>
 
-In order to check my entire code in R studio, you can access  objects: **(IMPLEMENT ON GITHUB)**
+In order to check my entire code in R studio, you can access  objects: 
 
 * [**data_setup.R**](data_setup_and_combining.R)
 * [**data_exploration.R**](data_exploration.R)
