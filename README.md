@@ -93,8 +93,6 @@ The raw data is not complete, although every ride has been registered in the per
 ## 3. Process
 <hr>
 
- 
-
 To work with Cyclistic's data, I had to apply previous knowledge I acquired during the Google Data Analytics Professional Certificate. Excel and RStudio.
 
 Excel was used for initial data exploration due to its ease of use for quick visualization and manipulation of small data sets. RStudio was selected for advanced data cleaning and statistical analysis making it easier to handle large data sets more efficiently.
