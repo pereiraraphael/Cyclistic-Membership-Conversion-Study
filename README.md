@@ -345,7 +345,8 @@ The data acquired with this study case was very useful to me to develop suggesti
 
 ### 5.1 S.W.O.T analysis
 
-![SWOT](https://github.com/user-attachments/assets/4252ce3b-cb72-4769-9735-7867c40e9472)
+![SWOT](https://github.com/user-attachments/assets/8a24cec7-bcd2-4717-8fdf-ed3e429b0daa)
+
 
 The company offers two very important pricing plans, one that is used by members, where they can ride Cyclist bikes throughout the whole year, and one plan where casual users can take the bike for the day. Although this is a proven business practice, it also exposes the fact that no other plans accommodate the year seasonality. Casual users also do not have enough reasons to subscribe to an annual pass if they usage during Winter is almost 14 times smaller than the usage during Summer.
 
@@ -357,6 +358,6 @@ Although the company already leads the bike-share business in that city, the exi
 
 We prepared a series of actions our company and marketing team could take in order to reach a large base of users and increase conversion rates from casual users to members. Please check the table below for a detailed version of these suggestions.
 
-![4W1H capstone](https://github.com/user-attachments/assets/e0df8542-e8bd-41f9-886d-1af39c6dee95)
+![4W1H capstone](https://github.com/user-attachments/assets/1761e532-2af4-43cf-823d-58e7c9297375)
 
 The analysis revealed clear distinctions between casual riders and members. Casual riders primarily use bikes for leisure during weekends and afternoons, while members use bikes for commuting during weekdays. These insights highlight the need for targeted marketing strategies that appeal to casual riders' motivations and usage patterns.
